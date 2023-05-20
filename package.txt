@@ -1,0 +1,434 @@
+package thank; 
+public class you 
+{ 
+public void disp() 
+{ 
+System.out.println("Thank you for choosing Indian Railways"); 
+} 
+}
+Page | 15
+import java.util.Scanner;
+import java.lang.Thread;
+import java.util.Random;
+import java.lang.Thread;
+import places.visit;
+import intro.login; 
+class railreserv
+{
+public static void main(String args[])
+ {
+ Random random=new Random();
+ Scanner s=new Scanner(System.in);
+System.out.println("--------------------------------------------------------------------------------------------------
+--");
+ System.out.println("| ====>WELCOME TO RAILWAY RESERVATION<===== 
+|");
+System.out.println("| |");
+ System.out.println("|************========> DEAR CUSTOMER, FILL THE DETAILS BELOW 
+AS FOLLOWS: <=========************ |");
+System.out.println("| |");
+System.out.println("--------------------------------------------------------------------------------------------------
+-----");
+intro.login li=new intro.login();
+int lic=li.show();
+places.visit vi=new places.visit();
+int dis=vi.display();
+ System.out.print("");
+int b1=0;
+ int b2=0;
+ int b3=0;
+ while(true)
+ {
+ b1=random.nextInt(50);
+ if(b1>=15)
+Page | 16
+ break;
+ }
+ while(true)
+ {
+ b2=random.nextInt(35);
+ if(b2>=5)
+ break;
+ }
+ while(true)
+ {
+ b3=random.nextInt(28);
+ if(b3>=6)
+ break;
+}
+int bpa=dis*12;
+int bpb=dis*17;
+int bpc=dis*22;
+int bn=0;
+while(true)
+ {
+ 
+System.out.println("1) THREE TIER -> out of 80, "+b1+" are remaining , TICKET PRICE = 
+"+bpa+"/-");
+ System.out.print("");
+System.out.println("2) TWO TIER -> out of 60, "+b2+" are remaining , TICEKT PRICE = 
+"+bpb+"/-");
+ System.out.print("");
+System.out.println("3) SLEEPER CLASS -> out of 40, "+b3+" are remaining , TICEKT 
+PRICE = "+bpc+"/-");
+System.out.print("");
+System.out.println(" => Enter your comfort travelling Block Number as follows:");
+ System.out.print("");
+ bn=s.nextInt();
+if(lic>b1 || lic>b2 || lic>b3)
+Page | 17
+{
+System.out.println("PLEASE CHOOSE THE TRAIN BLOCK LESS THAN 
+TRAVELLING MEMBERS");
+}
+break; 
+} 
+int gst=0;
+int t1=lic*bpa;
+int t2=lic*bpb;
+int t3=lic*bpc;
+int a1=(bpa/2);
+int a2=(bpb/2);
+int a3=(bpc/2);
+int bstr=0;
+if(bn==1)
+{
+bstr=b1; 
+gst=(t1+a1);
+}
+if(bn==2)
+{
+bstr=b2;
+gst=(t2+a2);
+}
+if(bn==3)
+{
+bstr=b3;
+gst=(t3+a3);
+} 
+System.out.println("==================================================================
+==============================================");
+System.out.println(" -> DEAR PASSENGER OUR SERVICES WILL PROVIDE YOU FOOD! IF YOU 
+ARE INTERESTED PRESS 1,IF NOT PRESS 0:");
+int f=s.nextInt();
+Page | 18
+int fno=0;
+int total=0;
+if(f==1)
+{
+ System.out.println("1) VEG");
+ System.out.println("2) NON VEG");
+ System.out.println("--> Enter any option from above");
+ int f1=s.nextInt();
+ if(f1==1)
+ { 
+ System.out.println("1) Veg Fried Rice 60/-");
+ System.out.println("2) Panner Curry 80/-");
+ System.out.println("3) Lady's finger Rice 80/-");
+ System.out.println("4) Aloo curry Rice 50/-");
+ System.out.println("5) Veg meals 100/-");
+ System.out.println("6) Roti with Dal 120/-");
+System.out.println(" -> ENTER ANY FOOD ITEM NUMBER FROM ABOVE 
+LIST:");
+fno=s.nextInt();
+if(fno==1)
+{
+total = gst+(lic*60);
+}
+else if(fno==2)
+{
+total = gst+(lic*80);
+}
+else if(fno==3)
+{
+total = gst+(lic*80);
+}
+else if(fno==4)
+{
+total = gst+(lic*50);
+}
+Page | 19
+else if(fno==5)
+{
+total = gst+(lic*100);
+}
+else if(fno==6)
+{
+total = gst+(lic*120);
+}
+else
+{
+System.out.println(" -> ENTER THE NUMBER FROM THE ABOVE
+LIST:");
+}
+System.out.println("TOTAL AMOUNT = "+total);
+}
+ if(f1==2)
+ {
+ System.out.println("1) Chicken Biryani 150/-");
+ System.out.println("2) Chicken Meals 140/-");
+ System.out.println("3) Mutton Curry with Rice 250/-");
+ System.out.println("4) Fish Curry with Rice 200/-");
+ System.out.println("5) Roti with Chicken Curry 180/-");
+ System.out.println("6) Roti with Mutton Curry 280/-");
+System.out.println(" -> ENTER ANY FOOD ITEM FROM ABOVE LIST:");
+fno=s.nextInt();
+if(fno==1)
+{
+total = gst+(lic*150);
+}
+else if(fno==2)
+{
+total = gst+(lic*140);
+}
+else if(fno==3)
+Page | 20
+{
+total = gst+(lic*250);
+}
+else if(fno==4)
+{
+total = gst+(lic*200);
+}
+else if(fno==5)
+{
+total = gst+(lic*180);
+}
+else if(fno==6)
+{
+total = gst+(lic*280);
+}
+else
+{
+System.out.println(" -> ENTER THE NUMBER FROM THE ABOVE
+LIST: ");
+}
+System.out.println("TOTAL AMOUNT = "+total);
+ }
+}
+else
+{
+System.out.println("TOTAL AMOUNT = "+gst);
+ }
+System.out.println("IF YOU WANT TO BOOK THE TICKETS THEN PLEASE ENTER 1 IF NOT PRESS 
+0:");
+int con=s.nextInt();
+if(con==1);
+{
+System.out.println(" ->REDIRECTING TO PAYMENT......");
+Page | 21
+System.out.println("");
+while(true)
+{
+System.out.println(" -> ENTER HUMAN CAPTCHA TO PROCEED 
+PAYMENT");
+System.out.println("");
+System.out.println(" -> 123456789");
+long capt=s.nextInt();
+try
+{
+if(capt==123456789)
+ {
+System.out.println("WAIT,WE ARE FINISHING YOUR 
+PAYMENT");
+System.out.println("");
+Thread.sleep(2000);
+System.out.println("PAYMENT DONE SUCCESSFULLY");
+System.out.println("");
+Thread.sleep(3000);
+System.out.println("YOUR SEATS AREE RESERVED");
+System.out.println("");
+Thread.sleep(4000);
+System.out.println("RESERVATION
+SEATTICKETNUMBERSARE:);
+Thread.sleep(6000);
+int i=0;
+for(i=1;i<=lic;i++)
+{
+System.out.println(bstr-i+" , ");
+}
+ }
+}
+catch(Exception e)
+{
+Page | 22
+System.out.println(e);
+}
+break;
+}
+}
+}
+ 
+}
+PACKAGE :
+package intro;
+import java.util.Scanner;
+public class login
+{
+public int show()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println(" => PASSENGER DETAILS <=");
+System.out.println("");
+System.out.println(" => ENTER NUMBER OF MEMBERS TO TRAVEL: ");
+System.out.println("");
+ int n=sc.nextInt();
+int i=0;
+int arr[]=new int[10];
+for(i=0;i<n;i++)
+{ 
+System.out.println(" 
+***********************************************");
+System.out.println(" => ENTER THE DETAILS OF PASSENGER "+(i+1)+" 
+:");
+System.out.println("");
+System.out.println(" -> FULL NAME = ");
+char pn=sc.next().charAt(0);
+Page | 23
+System.out.println(" -> AGE = ");
+int page=sc.nextInt();
+System.out.println(" -> GENDER = ");
+char pgen=sc.next().charAt(0);
+System.out.println(" -> PHONE NUMBER");
+long pno=sc.nextLong();
+}
+return n;
+}
+}
+//PACKAGE 2:
+package places;
+import java.util.Scanner;
+import java.util.Random;
+import java.lang.Thread;
+public class visit
+{
+Scanner sc=new Scanner(System.in);
+public int display()
+{ 
+ 
+System.out.println("==========================================================
+=======================================================");
+ System.out.println("< **********> TRAVELLING DETAILS <***********>");
+ System.out.println("");
+ System.out.println(" -> ENTER YOUR SOURCE = ");
+ String s1=sc.nextLine();
+ System.out.println(" -> ENTER YOUR DESTINATION = ");
+ String s2=sc.nextLine();
+ 
+ int hr,min,hr1,min1,hr2,min2,hr3,min3,hr4,min4;
+ Random random=new Random();
+Page | 24
+ String s3=s1+s2;
+ int sa=s3.length();
+ while(true)
+ 
+{
+hr=random.nextInt(25); if(hr!=0)
+break;
+ 
+}
+ while(true)
+ 
+{
+min=random.nextInt(61);
+if(min!=0)
+break;
+ 
+}
+ while(true)
+ 
+{
+hr1=random.nextInt(25);
+if(hr1!=0)
+break;
+ 
+}
+ while(true)
+ 
+{
+min1=random.nextInt(61);
+if(min1!=0)
+break;
+ 
+}
+ while(true)
+ 
+{
+hr
+2=random.nextInt(25);
+if(hr2!=0)
+break;
+ 
+}
+ while(true)
+ 
+{
+Page | 25
+min2=random.nextInt(61);
+if(min2!=0)
+break;
+ }
+ while(true)
+ {
+hr3=random.nextInt(25);
+if(hr3!=0)
+break;
+ }
+ while(true)
+ {
+min3=random.nextInt(61);
+if(min3!=0)
+break;
+ }
+ while(true)
+ {
+hr4=random.nextInt(24);
+if(hr4!=0)
+break;
+ }
+ while(true)
+ {
+min4=random.nextInt(61);
+if(min4!=0)
+break;
+ }
+ while(true)
+ {
+ System.out.println(" *****========> TRAIN LISTS
+<========*****");
+ System.out.println(" ------------------------");
+ System.out.println(" ==> TRAINS FROM "+s1+" to "+s2+ ":==");
+Page | 26
+ System.out.println(" TRAIN NUMBER TRAIN NAME TIMINGS");
+System.out.println("-------------- ------------ ----------");
+ System.out.println(" 1 
+"+s1.charAt(1)+""+s2.charAt(3)+""+s1.charAt(5)+""+s2.charAt(2)+""+s1.charAt(4)+" EXPRESS
+"+hr+":"+min);
+ System.out.println(" 2 
+"+s1.charAt(1)+""+s2.charAt(0)+""+s1.charAt(3)+""+s2.charAt(1)+""+s1.charAt(4)+" EXPRESS
+"+hr1+":"+min1);
+System.out.println(" 3 
+"+s1.charAt(2)+""+s2.charAt(3)+""+s1.charAt(4)+""+s2.charAt(1)+""+s1.charAt(0)+" EXPRESS
+"+hr2+":"+min2);
+System.out.println(" 4 
+"+s1.charAt(3)+""+s2.charAt(4)+""+s1.charAt(0)+""+s2.charAt(2)+""+s1.charAt(2)+" EXPRESS
+"+hr3+":"+min3);
+System.out.println(" 5 
+"+s1.charAt(0)+""+s2.charAt(3)+""+s1.charAt(2)+""+s2.charAt(1)+""+s1.charAt(4)+" EXPRESS
+"+hr4+":"+min4);
+System.out.println("=====================================================
+===============================================");
+System.out.println(" ==> Enter the choosen Train Number ");
+int tn=sc.nextInt();
+if(tn>5)
+{
+System.out.println("SELECT THE CORRECT TRAIN NUMBER");
+}
+else
+{
+ break;
+}
+ }
+ return sa;
+}
+}
